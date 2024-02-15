@@ -933,6 +933,12 @@ ________________
 
 .year {
     margin-top: 150px;
+    .year__body--design{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+    }
     .year__body {
         display: flex;
         align-items: center;
@@ -940,7 +946,7 @@ ________________
         gap: 20px;
         .year__left {
             display: flex;
-            gap: 44px;
+            gap: 30px;
             .year__text {
                -webkit-text-stroke: 3px #757575;
                 writing-mode: vertical-lr;
@@ -995,8 +1001,8 @@ ________________
                 // background: radial-gradient(closest-side, #B62AE890, transparent);
             }
             .year__img--design{
-                margin-left: -45%;
-                width: 150%;
+                margin-left: -50%;
+                width: 180%;
             }
             .year__img img{
             
@@ -1017,11 +1023,40 @@ ________________
             .year__margin{
                 margin-left: -9vw;
             }
+            .year__circles{
+                position: absolute;
+                top: -5%;
+                right: -32%;
+            }
+            .year__circles svg{
+                width: clamp(280px, 35vw, 680px);
+            }
         }
+    }
+}
+@media (max-width:1020px) {
+    .year__body--design{
+        flex-direction: column;
+    }
+    .year .year__body .year__right .year__img--design {
+        margin-left: 0;
+        max-width: 100%;
+    }
+    .year .year__body .year__right .year__circles {
+        position: absolute;
+        top: -5%;
+        right: 50%;
+        transform: translateX(50%);
+    }
+    .year .year__body .year__right .year__circles svg {
+        width: clamp(280px, 75vw, 680px);
     }
 }
 
 @media (max-width:425px) {
+    .year .year__body .year__right .year__circles {
+        top: -65%;
+    }
     .year__body {
         flex-direction: column;
         
@@ -2514,11 +2549,11 @@ ________________
         position: relative;
         z-index: 1;
         margin-top:-450px;
-        display: flex;
-
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         justify-content: space-between;
         align-items: center;
-        gap: 40px;
+        gap: clamp(20px, 2.2vw, 40px);
     }
     .info__cards {
         margin-top:160px;
@@ -2571,6 +2606,22 @@ ________________
 .info-reklama{
     margin-top: 530px;
 }
+@media (max-width:840px) {
+    .info{
+        .info__cards--design{
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
+@media (max-width:425px) {
+    .info{
+        .info__cards--design{
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+
 
 @media (max-width:768px) {
     .info .info__cards {
