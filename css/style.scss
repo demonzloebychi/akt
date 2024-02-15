@@ -735,9 +735,9 @@ ________________
 
    
     
-    .base_margin-l-low{
-        margin-left: -200px;
-    }
+    // .base_margin-l-low{
+    //     margin-left: -200px;
+    // }
 
     .base_margin-big-r{
         margin-top: -60px;
@@ -776,6 +776,11 @@ ________________
         position: absolute;
         top: 550px;
         right: 50px;
+    }
+    .item-tabs-base__img-line-tab-support{
+        position: absolute;
+        top: 25%;
+        right: 0;
     }
 }
 @media (max-width:1500px) {
@@ -1121,6 +1126,11 @@ ________________
 
 
 
+
+
+
+
+
 .tasks {
     margin: 100px 0;
     svg{
@@ -1367,7 +1377,7 @@ ________________
     }
 
     .tab-project__title {
-        color: #FFF;
+        color: var(--main-font);
         font-family: 'Manrope', sans-serif;
         font-size: clamp(22px, 2vw, 36px);
         font-weight: 600;
@@ -2133,7 +2143,6 @@ ________________
         }
     }
 }
-
 @media (max-width:490px) {
     .function{
         .function__cards {
@@ -2148,6 +2157,241 @@ ________________
         }
     }
 }
+
+
+
+
+
+
+.tech-price {
+    margin: 150px 0;
+    .tech-price__header {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .tech-price__title {
+        @include header-line;
+    }
+    .tech-price__wrapper {
+    }
+    .tech-price__cards {
+        margin-top: 70px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .tech-price__card {
+
+    }
+    .tp-card {
+        // max-width: 100%;
+        height: 24vw;
+        padding: clamp(30px, 2vw, 65px);
+        border-radius: 50%;
+        border: 1px solid rgb(48, 48, 48);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+    }
+    @media (hover: hover){
+        .tp-card:hover{
+            border: 2px solid var(--contrast-color);
+            background: #303030;
+        }
+    }
+    @media (hover: none){
+        .tp-card:active{
+            border: 2px solid var(--contrast-color);
+            background: #303030;
+        }
+    }
+    .tp-card:not(:first-child){
+        margin-left: -27px;
+    }
+    .tp-card__type {
+        color: rgb(117, 117, 117);
+        font-family: 'Geologica', sans-serif;
+        font-size: clamp(14px, 1.3vw, 20px);
+        font-weight: 400;
+        line-height: 110%;
+        text-transform: uppercase;
+    }
+    .tp-card__center{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: clamp(16px, 4vw, 24px);
+    }
+    .tp-card__price {
+        color: var(--main-font);
+        font-family: 'Geologica', sans-serif;;
+        font-size: clamp(20px, 2.5vw, 40px);
+        font-weight: 400;
+        line-height: 110%;
+        text-transform: uppercase;
+        white-space: nowrap;
+    }
+    .tp-card__time {
+        font-size: clamp(14px, 1.3vw, 20px);    }
+    .green-text {
+    }
+    .tp-card__date {
+        color: rgb(66, 66, 66);
+        font-family: 'Geologica', sans-serif;
+        font-size: clamp(14px, 1.3vw, 20px);
+        font-weight: 400;
+        line-height: 110%;
+        text-transform: uppercase;
+    }
+}
+@media (max-width:1180px) {
+    .tech-price{
+        .tp-card {
+            height: 25vw;
+        }    
+    }
+}
+@media (max-width:980px) {
+    .tech-price{
+        .tech-price__cards {
+            margin-top: 70px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        .tp-card {
+            height: 50vw;
+        }
+        .tp-card:not(:first-child){
+            margin-left: 0px;
+        }
+    
+    }
+}
+@media (max-width:470px) {
+    .tech-price{
+        .tech-price__cards {
+            margin-top: 70px;
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+        .tp-card {
+            height: 100vw;
+        }
+        .tp-card:not(:first-child){
+            margin-left: 0px;
+            margin-top: -10px;
+        }
+    
+    }
+}
+
+
+
+
+
+.report {
+    margin: 150px 0;
+    .report__wrapper {
+    }
+    .report__header {
+        @include header-line;
+    }
+    
+    .report__body {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .report__left {
+        display: flex;
+        flex-direction: column;
+        gap: clamp(20px, 3vw, 30px);
+        max-width: 505px;
+    }
+    
+    .left-report__title {
+        color: var(--main-font); 
+        font-family: 'Manrope', sans-serif; 
+        font-size: clamp(22px, 2vw, 36px); 
+        font-weight: 600; 
+        line-height: 1.1;
+    }
+    .left-report__text {
+        color: var(--main-font);
+        font-family: 'Manrope', sans-serif;
+        font-size: clamp(14px, 1.6vw, 20px);
+        font-weight: 400;
+        line-height: 1.4;
+    }
+    
+    .left-report__btn {
+        color: #404040;
+        font-family: 'Manrope', sans-serif;
+        font-size: clamp(14px, 1.6vw, 20px);
+        font-weight: 600;                                                                                                                                                                                               
+        text-transform: uppercase;
+        display: flex;
+        width: clamp(200px, 17vw, 260px);
+        padding: 0px 30px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8px;
+        text-align: center;
+        white-space: nowrap;
+        line-height: 1.1;
+        padding-top: clamp(15px, 2vw, 24px);
+        padding-bottom: clamp(15px, 2vw, 24px);
+    }
+    .report__right {
+        display: flex;
+        justify-content: end;
+    }
+    
+    .report__img {
+        width: clamp(300px, 50vw, 67%);
+        position: relative;
+        margin-right: 3%;
+        background-image: url(/img/svg/fiol-back.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .report__background-title{
+        position: absolute;
+        @include background-text;
+        top: 20%;
+        right: 40%;
+        z-index: -1;
+    }
+    .report__svg{
+        position: absolute;
+        top: 27%;
+        right: 20%;
+
+    }
+    .report__svg svg{
+        width: clamp(280px, 35vw, 100%);
+        backdrop-filter: blur(10px);
+    }
+}
+
+@media (max-width:768px) {
+    .report {
+        .report__header {
+            margin-bottom: 40px;
+        }
+        .report__body {
+            flex-direction: column;        
+        }
+        .report__right {
+            justify-content: center;
+        }
+    }
+}
+
+
 
 
 

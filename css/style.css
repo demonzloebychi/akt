@@ -662,9 +662,6 @@ ________________ .base {
   flex-direction: column;
   gap: 33px;
 }
-.base__tabs .base_margin-l-low {
-  margin-left: -200px;
-}
 .base__tabs .base_margin-big-r {
   margin-top: -60px;
   margin-left: 820px;
@@ -697,6 +694,11 @@ ________________ .base {
   position: absolute;
   top: 550px;
   right: 50px;
+}
+.base__tabs .item-tabs-base__img-line-tab-support {
+  position: absolute;
+  top: 25%;
+  right: 0;
 }
 
 @media (max-width: 1500px) {
@@ -1211,7 +1213,7 @@ ________________ .base {
   max-width: 505px;
 }
 .project .tab-project__title {
-  color: #FFF;
+  color: var(--main-font);
   font-family: "Manrope", sans-serif;
   font-size: clamp(22px, 2vw, 36px);
   font-weight: 600;
@@ -1886,6 +1888,219 @@ ________________ .base {
   .function .f-card__svg svg {
     max-width: 100%;
     max-height: 40vw;
+  }
+}
+.tech-price {
+  margin: 150px 0;
+}
+.tech-price .tech-price__header {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.tech-price .tech-price__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--main-font);
+  padding-bottom: clamp(25px, 3vw, 40px);
+}
+.tech-price .tech-price__cards {
+  margin-top: 70px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.tech-price .tp-card {
+  height: 24vw;
+  padding: clamp(30px, 2vw, 65px);
+  border-radius: 50%;
+  border: 1px solid rgb(48, 48, 48);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+@media (hover: hover) {
+  .tech-price .tp-card:hover {
+    border: 2px solid var(--contrast-color);
+    background: #303030;
+  }
+}
+@media (hover: none) {
+  .tech-price .tp-card:active {
+    border: 2px solid var(--contrast-color);
+    background: #303030;
+  }
+}
+.tech-price .tp-card:not(:first-child) {
+  margin-left: -27px;
+}
+.tech-price .tp-card__type {
+  color: rgb(117, 117, 117);
+  font-family: "Geologica", sans-serif;
+  font-size: clamp(14px, 1.3vw, 20px);
+  font-weight: 400;
+  line-height: 110%;
+  text-transform: uppercase;
+}
+.tech-price .tp-card__center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(16px, 4vw, 24px);
+}
+.tech-price .tp-card__price {
+  color: var(--main-font);
+  font-family: "Geologica", sans-serif;
+  font-size: clamp(20px, 2.5vw, 40px);
+  font-weight: 400;
+  line-height: 110%;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.tech-price .tp-card__time {
+  font-size: clamp(14px, 1.3vw, 20px);
+}
+.tech-price .tp-card__date {
+  color: rgb(66, 66, 66);
+  font-family: "Geologica", sans-serif;
+  font-size: clamp(14px, 1.3vw, 20px);
+  font-weight: 400;
+  line-height: 110%;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1180px) {
+  .tech-price .tp-card {
+    height: 25vw;
+  }
+}
+@media (max-width: 980px) {
+  .tech-price .tech-price__cards {
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .tech-price .tp-card {
+    height: 50vw;
+  }
+  .tech-price .tp-card:not(:first-child) {
+    margin-left: 0px;
+  }
+}
+@media (max-width: 470px) {
+  .tech-price .tech-price__cards {
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .tech-price .tp-card {
+    height: 100vw;
+  }
+  .tech-price .tp-card:not(:first-child) {
+    margin-left: 0px;
+    margin-top: -10px;
+  }
+}
+.report {
+  margin: 150px 0;
+}
+.report .report__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--main-font);
+  padding-bottom: clamp(25px, 3vw, 40px);
+}
+.report .report__body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.report .report__left {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(20px, 3vw, 30px);
+  max-width: 505px;
+}
+.report .left-report__title {
+  color: var(--main-font);
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(22px, 2vw, 36px);
+  font-weight: 600;
+  line-height: 1.1;
+}
+.report .left-report__text {
+  color: var(--main-font);
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(14px, 1.6vw, 20px);
+  font-weight: 400;
+  line-height: 1.4;
+}
+.report .left-report__btn {
+  color: #404040;
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(14px, 1.6vw, 20px);
+  font-weight: 600;
+  text-transform: uppercase;
+  display: flex;
+  width: clamp(200px, 17vw, 260px);
+  padding: 0px 30px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  text-align: center;
+  white-space: nowrap;
+  line-height: 1.1;
+  padding-top: clamp(15px, 2vw, 24px);
+  padding-bottom: clamp(15px, 2vw, 24px);
+}
+.report .report__right {
+  display: flex;
+  justify-content: end;
+}
+.report .report__img {
+  width: clamp(300px, 50vw, 67%);
+  position: relative;
+  margin-right: 3%;
+  background-image: url(/img/svg/fiol-back.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.report .report__background-title {
+  position: absolute;
+  font-family: "Geologica", sans-serif;
+  font-size: clamp(36px, 5vw, 96px);
+  font-weight: 600;
+  line-height: 1.1;
+  text-transform: uppercase;
+  -webkit-text-stroke: 1px #757575;
+  -webkit-text-fill-color: transparent;
+  top: 20%;
+  right: 40%;
+  z-index: -1;
+}
+.report .report__svg {
+  position: absolute;
+  top: 27%;
+  right: 20%;
+}
+.report .report__svg svg {
+  width: clamp(280px, 35vw, 100%);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+
+@media (max-width: 768px) {
+  .report .report__header {
+    margin-bottom: 40px;
+  }
+  .report .report__body {
+    flex-direction: column;
+  }
+  .report .report__right {
+    justify-content: center;
   }
 }
 .info {
